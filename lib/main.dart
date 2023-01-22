@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:scanner/presentation/Screens/CreateScreen.dart';
+import 'package:scanner/presentation/Screens/ReadScreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -42,7 +43,7 @@ class _HomeScreenState extends State<HomeScreen> {
           children: [
             ElevatedButton(
               onPressed: () {
-                print("creat");
+
                 Navigator.of(context).push(
                   MaterialPageRoute(builder: (_) => const CreateQRScreen()),
                 );
@@ -51,7 +52,9 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             ElevatedButton(
               onPressed: () {
-                print("Read");
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (_) => const ReadQRScreen()),
+                );
               },
               child: const Text("Read QR Code "),
             ),
